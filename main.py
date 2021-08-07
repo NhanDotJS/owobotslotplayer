@@ -3,6 +3,12 @@ import sys
 import time
 import discord
 import random
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 # client = discord.Client()
 
 # client = discord.Client(activity=discord.Game(name='Nghiện cờ bạc time'))
@@ -106,6 +112,6 @@ class MyClient(discord.Client):
 
 client = MyClient(activity=discord.Game(name='Nghiện cờ bạc time'))
 
-client.run('ODMyMTMwNTIwNzU3MzA1NDA0.YHfT8A.wtGzYuSmO2qHH6xOTtLpK-Z0S0c')
+client.run(os.environ.get("TOKEN"))
 
 # 497, 853
