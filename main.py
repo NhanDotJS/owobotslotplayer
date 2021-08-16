@@ -27,8 +27,8 @@ load_dotenv(dotenv_path)
 # async def on
 class MyClient(discord.Client):
     def betbung(self):
-        if self.randomvar in range(16, 19):
-            pyautogui.click(x=33, y=692)
+        if self.randomvar in range(15, 20):
+            pyautogui.click(x=33, y=696)
             time.sleep(0.5)
             pyautogui.click(x=497, y=853)
             pyautogui.write('owo h')
@@ -37,14 +37,14 @@ class MyClient(discord.Client):
             pyautogui.write('owo b')
             pyautogui.press('enter')
             time.sleep(2)
-            pyautogui.click(x=37, y=645)
+            pyautogui.click(x=36, y=643)
             time.sleep(0.5)
             pyautogui.click(x=497, y=853)
-            pyautogui.write('owo s '+str(self.value))
+            pyautogui.write('owo s ' + str(self.value))
             pyautogui.press('enter')
         else:
             pyautogui.click(x=497, y=853)
-            pyautogui.write('owo s '+str(self.value))
+            pyautogui.write('owo s ' + str(self.value))
             pyautogui.press('enter')
 
     async def on_ready(self):
